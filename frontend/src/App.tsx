@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         
         <Route exact path="/">
-          <header className="bg-gray-700 flex justify-center items-center box-border w-screen h-screen px-10">
+          <header className="bg-blue flex justify-center items-center box-border w-screen h-screen px-10">
             {(!isAuthenticated) && <UnAuthHome />}
             {isAuthenticated && <AuthHome />}
           </header>

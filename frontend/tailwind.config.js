@@ -2,7 +2,6 @@ module.exports = {
 	purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		extend: {},
 		screens: {
 			"mobile-sm": "320px",
 			"mobile-md": "375px",
@@ -14,6 +13,16 @@ module.exports = {
 		},
 		fontFamily: {
 			rajdhani: ['"Rajdhani"', "sans-serif"],
+		},
+		extend: {
+			colors: {
+				blue: {
+					DEFAULT: "#71a1ff",
+				},
+				indigo: {
+					DEFAULT: "#8076fc",
+				},
+			},
 		},
 	},
 	variants: {
