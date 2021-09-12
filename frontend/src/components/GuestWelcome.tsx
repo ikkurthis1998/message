@@ -7,6 +7,7 @@ const GuestWelcome = () => {
 
     useEffect(() => {
         if (window.location.search) {
+            console.log("Yes");
             setEnable(true);
         }
     }, [])
