@@ -6,11 +6,25 @@ const AuthHome = () => {
 
     const { logout, user } = useAuth0();
 
+    // const [nameProcess, setNameProcess] = useState(false);
+    // const [userName, setuserName] = useState("");
+
+    // const setName = () => {
+    //     setNameProcess(true);
+    // }
+
+    // const saveName = () => {
+        
+    //     setNameProcess(false);
+    // }
 
     if (user) {
         return (
-            <div className="flex justify-evenly w-screen h-screen rounded-lg py-10 box-border">
-                <p>{ user.name }</p>
+            <div className="flex flex-col justify-start items-center w-screen h-screen rounded-lg py-10 box-border bg-blue">
+                {/* {nameProcess ? <input type="text" defaultValue={user.name} onChange={(e) => setuserName(e.target.value)} /> : <p>{user.name}</p>}
+                {nameProcess ? <button onClick={() => saveName()}>Save</button> : <button onClick={() => setName()}>update name</button>} */}
+                <p className="font-bold text-2xl">{user.name}</p>
+                <button onClick={() => logout({ returnTo: "http://localhost:3001" })}>Log Out</button>
                 {/* <div className="bg-white flex flex-col justify-start items-center mobile-sm:w-full tablet:w-3/12 rounded-lg">
                     <div>
                         <img src={user.picture} alt={user.name} />
